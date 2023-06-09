@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+header {
+    height: 100px;
+    background-color: #e04949;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+header > h1{
+    margin-left: 150px;
+    color: white;
+}
+
+header > h3 {
+    margin-right: 150px;
+}
+
+header > h3 > a{
+    color: white;
+    text-transform: capitalize;
+}
+
+.body {
+    width: 600px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 180px);
+}
+
+.card {
+    width: 600px;
+}
+
+.card > h1 {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.card > p {
+    text-align: justify;
+}
+
+form > label {
+    font-size: 18px;
+    margin-top: .5em;
+    font-family: 'Roboto Mono', monospace;
+}
+
+form > input {
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    color: red;
+    margin-top: 1em;
+    background-color: white;
+    outline: none;
+    border: 1px solid red;
+    padding: 10px 0;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+    font-size: 14px;
+    /* transition: .2s; */
+}
+
+.btn:hover{
+    box-shadow: 1px 1px 10px red;
+    transition: .3s;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 20px;
+    width: 100%;
+    bottom: 0;
+    background-color: #e04949;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;    
+} 
+
+footer > div {
+    margin-left: 150px;
+} 
+
+footer > p {
+    margin-right: 150px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    margin-top: 50px ;
+    text-align: center;
+}
+
+table > thead > tr {
+    background-color: rgb(164, 155, 155);
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+table > thead > tr > th {
+    padding: 0 5em;
+    
+}
+
+table > tbody > tr {  
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#top-btn {
+    color: red;
+    margin-top: 20px;
+}
