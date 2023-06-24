@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action=""> -->
+
+        <input type="search" name="" id="">
+        <button type="submit">Enviar</button>
+    <!-- </form> -->
+
+        <div class="card">
+            <p class="id-pok"></p>
+            <img class="img-pok" src="" alt="">
+            <h4 class="nome-pok"></h4>
+        </div>
+</body>
+
+<style>
+
+.card{
+    /* width: 150px; */
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    border: red 1px solid;
+    margin: 20px;
+    max-width: 200px;
+}
+
+    .id-pok{
+        text-align: right;
+        margin: 5px;
+    }
+
+    .nome-pok {
+        font-size: 20px;
+        text-align: center;
+        background-color: red;
+        margin: 0;
+        padding: 20px;
+        text-transform: capitalize;
+        color: white;
+    }
+
+    .img-pok {
+        width: 200px;
+    }
+
+</style>
+
+<script>
+
+
+    var btn = document.querySelector('button');
+
+    btn.addEventListener('click', function(){
+        var url = 'https://pokeapi.co/api/v2/pokemon/';
+
+        var pokemon = document.querySelector('input').value;
+
+        console.log(pokemon)
+
+
+        fetch(url + pokemon)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                var idpok = document.querySelector('.id-pok');
+                var imgpok = document.querySelector('.img-pok');
+                var nomepok = document.querySelector('.nome-pok');
+                
+                idpok.innerHTML = data.id
+                imgpok.setAttribute('src', data.sprites.back_default);
+                nomepok.innerHTML = data.name
+
+
+
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
+    })
+
+    
+</script>
+</html>

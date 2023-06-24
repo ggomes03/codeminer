@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="icons/icons8-lâmpada-de-edison-100.png" alt="">
+
+    <br>
+
+    <button class="btn">Acender</button>
+</body>
+
+<script>
+
+    var img = document.querySelector('img');
+    var btn = document.querySelector('.btn');
+
+    btn.addEventListener('click', function(){
+        img.classList.toggle('aceso');
+
+        if(img.classList.contains('aceso')){
+            img.setAttribute('src', 'icons/icons8-lâmpada-de-edison-96.png');
+            btn.innerHTML = 'Apagar';
+        } else {
+            img.setAttribute('src', 'icons/icons8-lâmpada-de-edison-100.png');
+            btn.innerHTML = 'Acender';
+
+        }
+
+
+    })
+
+
+
+
+</script>
+</html>
